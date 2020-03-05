@@ -37,6 +37,7 @@ module.exports = {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-props-no-spreading': [0],
     'no-console': ['error', { allow: ['tron'] }],
     'no-param-reassign': 'off',
     'import/prefer-default-export': 'off',
@@ -49,8 +50,14 @@ module.exports = {
           '/^@shared/',
           ['parent', 'sibling', 'index'],
         ],
-        alphabetize: { order: 'asc', ignoreCase: true },
       },
     ]
   },
+  settings: {
+    'import/resolver': {
+      'babel-plugin-root-import': {
+        rootPathSuffix: 'src',
+      }
+    }
+  }
 };
