@@ -11,7 +11,6 @@ import {
   isEqual,
 } from 'date-fns';
 import locale from 'date-fns/locale/pt-BR';
-import { utcToZonedTime } from 'date-fns-tz';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import api from '~/services/api';
 
@@ -32,11 +31,9 @@ export default function Dashboard() {
     async function loadSchedules() {
       const response = await api.get('/schedules', { params: { date } });
 
-      const { timeZone } = Intl.DateTimeFormat().resolvedOptions();
-
       const data = range.map(hour => {
         const checkDate = setSeconds(setMinutes(setHours(date, hour), 0), 0);
-        const compareDate = utcToZonedTime(checkDate, timeZone);
+        const compareDate = new Date(checkDate.toUTCString());
 
         return {
           time: `${hour}:00h`,
@@ -51,7 +48,8 @@ export default function Dashboard() {
     }
 
     loadSchedules();
-  }, [date, range]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [date]);
 
   function handlePrevDay() {
     setDate(subDays(date, 1));
