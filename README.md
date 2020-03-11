@@ -37,6 +37,6 @@ $ yarn start
 ## Resultado
 Para ver uma demonstração em vídeo [clique aqui](https://youtu.be/wbLWIJ-nDiM).
 <h1 align="center">
-  <img alt="Fastfeet" title="GoBarber" src="https://i.imgur.com/DnNMDBZ.png" />
+  <img alt="Fastfeet" title="GoBarber" src="https://i.imgur.com/dKMMPUZ.png" />
 </h1>
 
