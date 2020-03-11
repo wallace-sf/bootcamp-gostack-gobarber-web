@@ -11,33 +11,35 @@
 </p>
 
 ## :rocket: Sobre o Bootcamp
-O bootcamp da Rocketseat é composto por fases e módulos. Cada módulo é realizado um desafio para fixação do conteúdo apresentado. Para 
-ler o desafio completo [clique aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-03).
+O bootcamp da Rocketseat é composto por fases e módulos. Cada módulo é realizado um desafio para fixação do conteúdo apresentado.
 
-## Install
-After accessing the project's root folder from the terminal, install the dependencies using: 
+## Instalação
+Antes de prosseguir é necessário alguns passo para o projeto funcionar. Após baixar o reposótorio, acesse a pasta e digite no terminal: 
 ```sh
 # npm
-npm i
+$ npm i
 # yarn
-yarn
+$ yarn
 ```
-Create a Docker container with PostgreSQL image:
+## API
+Para que o Front-end funcione corretamente, é necessário instalar a api para o consumo dos dados. [Clique aqui](https://github.com/wallace-sf/bootcamp-gostack-fastfeet-api) para instalar
+
+Crie um container no Docker utilizando uma imagem do PostgreSQL. Para baixar o programa [clique aqui.](https://www.docker.com/products/docker-desktop)
 ```sh
-docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+$ docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ```
-Create a Docker container with Redis image:
+Crie outro container utilizando uma imagem do MongoDB:
 ```sh
-docker run --name redisfeet -p 6379:6379 -d -t redis:alpine
+$ docker run --name mongobarber -d -t mongo
 ```
 
 ## Scripts
+Para iniciar o projeto digite:
 ```sh
-# Start in development mode with nodemon
-yarn dev or npm run dev
-# Start debug in development mode with nodemon
-yarn dev:debug or npm run dev:debug
-# Start processing queues with Bee Queue
-yarn queue or npm run queue
+# npm
+$ npm start
+
+# yarn
+$ yarn start
 ```
 
