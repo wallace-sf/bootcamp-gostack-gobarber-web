@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Fastfeet" title="GoBarber" src="https://i.imgur.com/a34ao0x.png" width="300px" />
+  <img alt="Fastfeet" title="GoBarber" src="https://i.imgur.com/a34ao0x.png" width="150px" />
 </h1>
 
 <p align="center">“Simples! É você que controla a sua mente, se você acreditar e lutar pelo que quer, você conseguirá atingir tudo o que pretende.”</blockquote>
@@ -33,4 +33,6 @@ $ npm start
 # yarn
 $ yarn start
 ```
+
+## Resultado
 
